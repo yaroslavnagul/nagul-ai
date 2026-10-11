@@ -10,7 +10,7 @@
 <link rel="canonical" href="https://nagul.ai/">
 <link rel="alternate" hreflang="uk" href="https://nagul.ai/">
 <link rel="alternate" hreflang="en" href="https://nagul.ai/en/">
-<link rel="alternate" hreflang="x-default" href="https://nagul.ai/">
+<link rel="alternate" hreflang="x-default" href="https://nagul.ai/en/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="nagul.ai">
 <meta property="og:locale" content="uk_UA">
@@ -56,7 +56,7 @@
    "author": {
     "@id": "https://nagul.com.ua/#person"
    },
-   "dateModified": "2026-10-10T00:00:00+03:00",
+   "dateModified": "2026-10-11T00:00:00+03:00",
    "primaryImageOfPage": {
     "@type": "ImageObject",
     "url": "https://nagul.ai/img/wanderer_hero.jpg",
@@ -358,7 +358,7 @@ footer .disc{flex-basis:100%;margin:0;max-width:none;font-size:12px;color:var(--
       <li><p class="k">01 · Brief</p><h3><span class="uk">Бриф</span></h3><p><span class="uk">Завдання описано у файлі: джерела, клас перевірки, що вважати готовим. Перш ніж бриф піде виконавцю, окремий агент шукає в ньому прогалини.</span></p></li>
       <li><p class="k">02 · Execute</p><h3><span class="uk">Виконання</span></h3><p><span class="uk">Агент-виконавець працює з файлами, а не в чаті, і здає пакет: результат, самоперевірку й перелік контрольних сум усіх файлів.</span></p></li>
       <li class="v"><p class="k">03 · Verify</p><h3><span class="uk">Перевірка</span></h3><p><span class="uk">Спершу скрипти без моделі, потім агенти, що шукають, чим спростувати кожне твердження; важливе перевіряє ще й модель іншого розробника. Окрема сесія-суддя виносить вердикт і нічого не править.</span></p></li>
-      <li class="m"><p class="k">04 · Merge</p><h3><span class="uk">Злиття</span></h3><p><span class="uk">Лише після вердикту й мого «ок» результат іде в бібліотеку чи адресатові.</span></p></li>
+      <li class="m"><p class="k">04 · Merge</p><h3><span class="uk">Злиття</span></h3><p><span class="uk">Лише після вердикту й мого «ок» результат іде в бібліотеку. Надіслати його адресатові це «ок» не дозволяє: на кожне надсилання потрібне окреме.</span></p></li>
     </ol>
     <p class="svc"><span class="uk"><i><span class="dot"></span>крок</i> · <i><span class="dot v"></span>перевірка</i> · <i><span class="dot m"></span>чекає «ок» людини</i> · стан методу на 10 жовтня 2026</span></p>
   </section>
@@ -370,7 +370,7 @@ footer .disc{flex-basis:100%;margin:0;max-width:none;font-size:12px;color:var(--
     <ol class="oks">
       <li><h3><span class="uk">Правила</span></h3><p><span class="uk">Зміна правил роботи агентів, їхніх ролей і канонічних файлів. Без «ок» пропозиція лишається пропозицією.</span></p></li>
       <li><h3><span class="uk">Злиття</span></h3><p><span class="uk">Результат після вердикту судді. Без «ок» він лишається перевіреним, але нікуди не йде.</span></p></li>
-      <li><h3><span class="uk">Відправлення назовні, видалення й гроші</span></h3><p><span class="uk">Документ клієнту, лист людині, будь-яке видалення, покупки й запуски понад ліміт. Це обмеження в налаштуваннях, а не домовленість: агент пише чернетку, надсилаю я.</span></p></li>
+      <li><h3><span class="uk">Відправлення назовні, видалення й гроші</span></h3><p><span class="uk">Документ клієнту, лист людині, будь-яке видалення, покупки й запуски понад ліміт. Надсилання й видалення через підключені сервіси (пошта, календар, хмарний диск) без мого підтвердження заблоковані налаштуваннями, а не домовленістю; у сесії без людини вони відхиляються. Покупки й запуски понад ліміт обмежує правило; платіжних інструментів агенти не мають. Агент пише чернетку, надсилаю я.</span></p></li>
     </ol>
     <p class="after"><span class="uk">Усе до цих точок іде без мене. Якщо конвеєр зупинився на одній із них, він нічого не втрачає, а просто чекає.</span></p>
   </section>
@@ -469,7 +469,7 @@ footer .disc{flex-basis:100%;margin:0;max-width:none;font-size:12px;color:var(--
   <section id="limits">
     <p class="kicker"><span class="uk">Межі</span></p>
     <h2><span class="uk">Агенти не підписують і не судять про вартість</span></h2>
-    <p class="intro"><span class="uk">Агенти читають усе повністю, рахують, шукають суперечності й готують чернетки. Висновок, його обґрунтування й відповідальність за нього лишаються за оцінювачем. Що про це кажуть МСО та ЄСО, я розібрав у нотатці «<a href="https://nagul.com.ua/notes/ai-and-professional-judgement/">Чи може оцінювач використовувати ШІ за МСО та ЄСО?</a>».</span></p>
+    <p class="intro"><span class="uk">Агенти читають джерела, рахують, шукають суперечності й готують чернетки, а здача називає, що перевірено й що лишилось неперевіреним. Висновок, його обґрунтування й відповідальність за нього лишаються за оцінювачем. Що про це кажуть МСО та ЄСО, я розібрав у нотатці «<a href="https://nagul.com.ua/notes/ai-and-professional-judgement/">Чи може оцінювач використовувати ШІ за МСО та ЄСО?</a>».</span></p>
   </section>
 
   <!-- ===== AUTHOR ===== -->
@@ -487,8 +487,8 @@ footer .disc{flex-basis:100%;margin:0;max-width:none;font-size:12px;color:var(--
   <footer>
     <span><span class="uk">Ярослав Нагул · MRICS, REV</span></span>
     <span class="sig" style="font-size:22px" aria-hidden="true">Yaroslav Nagul</span>
-    <!-- ed. A · 2026-10-10 -->
-    <span class="svc"><span class="uk">оновлено 10&nbsp;жовтня 2026</span></span>
+    <!-- ed. B · 2026-10-11 -->
+    <span class="svc"><span class="uk">оновлено 11&nbsp;жовтня 2026</span></span>
     <p class="disc"><span class="uk">Лабораторія&nbsp;— мій особистий проєкт. Погляди, висловлені на цьому сайті, мої власні й можуть не збігатися з позицією RSM Ukraine.</span></p>
   </footer>
 </div>
