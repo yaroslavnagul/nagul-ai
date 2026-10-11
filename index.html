@@ -1,0 +1,496 @@
+<!doctype html>
+<html lang="uk" data-lang="uk">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Лабораторія ШІ · Ярослав Нагул</title>
+<meta name="author" content="Yaroslav Nagul">
+<meta name="description" content="Лабораторія ШІ оцінювача Ярослава Нагула, MRICS: як команда ШІ-агентів читає й перевіряє, де робота чекає рішення людини, вісім правил методу і журнал експериментів The Wanderer’s Notes.">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://nagul.ai/">
+<link rel="alternate" hreflang="uk" href="https://nagul.ai/">
+<link rel="alternate" hreflang="en" href="https://nagul.ai/en/">
+<link rel="alternate" hreflang="x-default" href="https://nagul.ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="nagul.ai">
+<meta property="og:locale" content="uk_UA">
+<meta property="og:locale:alternate" content="en_GB">
+<meta property="og:title" content="Лабораторія ШІ · Ярослав Нагул">
+<meta property="og:description" content="Лабораторія ШІ оцінювача Ярослава Нагула, MRICS: як команда ШІ-агентів читає й перевіряє, де робота чекає рішення людини, вісім правил методу і журнал експериментів The Wanderer’s Notes.">
+<meta property="og:url" content="https://nagul.ai/">
+<meta property="og:image" content="https://nagul.ai/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Мандрівник на степовій дорозі перед роздоріжжям">
+<meta name="twitter:card" content="summary_large_image">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "WebSite",
+   "@id": "https://nagul.ai/#website",
+   "url": "https://nagul.ai/",
+   "name": "nagul.ai",
+   "inLanguage": [
+    "uk",
+    "en"
+   ],
+   "author": {
+    "@id": "https://nagul.com.ua/#person"
+   },
+   "publisher": {
+    "@id": "https://nagul.com.ua/#person"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://nagul.ai/#page",
+   "url": "https://nagul.ai/",
+   "name": "Лабораторія ШІ · Ярослав Нагул",
+   "description": "Лабораторія ШІ оцінювача Ярослава Нагула, MRICS: як команда ШІ-агентів читає й перевіряє, де робота чекає рішення людини, вісім правил методу і журнал експериментів The Wanderer’s Notes.",
+   "inLanguage": "uk",
+   "isPartOf": {
+    "@id": "https://nagul.ai/#website"
+   },
+   "author": {
+    "@id": "https://nagul.com.ua/#person"
+   },
+   "dateModified": "2026-10-10T00:00:00+03:00",
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://nagul.ai/img/wanderer_hero.jpg",
+    "width": 1536,
+    "height": 700
+   }
+  },
+  {
+   "@type": "Blog",
+   "@id": "https://nagul.ai/#notes",
+   "url": "https://nagul.ai/#notes",
+   "name": "The Wanderer’s Notes",
+   "inLanguage": "uk",
+   "author": {
+    "@id": "https://nagul.com.ua/#person"
+   },
+   "blogPost": [
+    {
+     "@id": "https://nagul.ai/log/double/#article"
+    },
+    {
+     "@id": "https://nagul.ai/log/shapeshifter/#article"
+    }
+   ]
+  },
+  {
+   "@type": "Person",
+   "@id": "https://nagul.com.ua/#person",
+   "name": "Yaroslav Nagul",
+   "givenName": "Yaroslav",
+   "familyName": "Nagul",
+   "alternateName": [
+    "Ярослав Нагул",
+    "Yaroslav Nahul"
+   ],
+   "url": "https://nagul.com.ua/",
+   "image": "https://nagul.com.ua/portrait.jpg",
+   "jobTitle": "Партнер, практика оцінки та дорадчих послуг",
+   "worksFor": {
+    "@type": "Organization",
+    "name": "RSM Ukraine",
+    "url": "https://www.rsm.global/ukraine/"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/in/yaroslav-nagul-mrics-rev-14382944/",
+    "https://nagul.com.ua/"
+   ]
+  }
+ ]
+}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sofia+Sans+Condensed:wght@500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=IBM+Plex+Mono:wght@400;500&family=Allura&display=swap">
+<style>
+/* nagul.ai — AI lab. nagul-style tokens (same as nagul.com.ua); route motif = the Wanderer's road. Colour roles: amber = structure, teal = verified, rust = human stop / attention. */
+:root{
+  --bg:#F4F6F5; --surface:#FFFFFF; --surface-2:#EAEFED;
+  --ink:#171D1E; --ink-2:#3E4849; --muted:#616C6B; --line:#D3DAD8; --line-2:#E4E9E7;
+  --accent:#A8650C; --accent-ink:#8A5209; --accent-soft:#F7ECDA;
+  --ok:#0F6E7A; --ok-ink:#0B5A64; --ok-soft:#DFEEF0;
+  --warn:#9A3B2B; --warn-ink:#7E2F22; --warn-soft:#F6E4E0;
+  --display:"Sofia Sans Condensed","Avenir Next Condensed","Roboto Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Source Serif 4",Charter,Georgia,"Times New Roman",serif;
+  --data:"IBM Plex Mono","SF Mono",Menlo,Consolas,"Liberation Mono",monospace;
+  --sig:"Allura","Snell Roundhand","Apple Chancery",cursive;
+  color-scheme:light;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0F1516; --surface:#171F21; --surface-2:#1E292B; --ink:#E6ECEA; --ink-2:#BCC6C3; --muted:#8A9593; --line:#2A3638; --line-2:#223033;
+    --accent:#DDA045; --accent-ink:#EFC07A; --accent-soft:#33270F; --ok:#4DB3B8; --ok-ink:#7FD0D4; --ok-soft:#143035; --warn:#E0785F; --warn-ink:#EE9A86; --warn-soft:#33191A;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0F1516; --surface:#171F21; --surface-2:#1E292B; --ink:#E6ECEA; --ink-2:#BCC6C3; --muted:#8A9593; --line:#2A3638; --line-2:#223033;
+  --accent:#DDA045; --accent-ink:#EFC07A; --accent-soft:#33270F; --ok:#4DB3B8; --ok-ink:#7FD0D4; --ok-soft:#143035; --warn:#E0785F; --warn-ink:#EE9A86; --warn-soft:#33191A;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:15.5px;line-height:1.5;-webkit-font-smoothing:antialiased;padding-block:20px 40px;padding-inline:16px}
+img{max-width:100%;display:block}
+a{color:var(--ok-ink);text-decoration:none;border-bottom:1px solid var(--line)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--ok);outline-offset:2px}
+.wrap{max-width:1180px;margin:0 auto}
+
+:root[data-lang="uk"] .en{display:none!important}
+:root[data-lang="en"] .uk{display:none!important}
+:root:not([data-lang]) .en{display:none!important}
+
+/* head */
+.head{display:flex;justify-content:space-between;align-items:baseline;gap:12px 24px;flex-wrap:wrap;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.eyebrow{font-family:var(--data);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0}
+.setline{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
+.setline .name{font-size:13px;color:var(--ink-2)}
+.sig{font-family:var(--sig);font-size:26px;line-height:1;color:var(--ink);opacity:.85;white-space:nowrap}
+.lang{display:flex;gap:2px;margin-left:8px}
+.lang button{font:inherit;font-family:var(--data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);cursor:pointer}
+.lang button[aria-pressed="true"]{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+.lang a{font-family:var(--data);font-size:11px;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;border:1px solid var(--line);background:var(--surface);color:var(--ink-2);line-height:1.5}
+.lang a[aria-current="page"]{border-color:var(--accent);color:var(--accent-ink);background:var(--accent-soft)}
+
+/* route nav */
+.route{display:flex;flex-wrap:wrap;align-items:center;margin:14px 0 0;padding:0;list-style:none;gap:8px 0}
+.route li{display:flex;align-items:center}
+.route li::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--accent);margin-right:8px;flex:none}
+.route li:not(:last-child){padding-right:22px;background:repeating-linear-gradient(90deg,var(--accent) 0 3px,transparent 3px 7px) right 0 center/16px 1.4px no-repeat}
+.route a{font-family:var(--data);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-2);border:0}
+.route a:hover{color:var(--accent-ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 340px;gap:32px 56px;align-items:end;padding:30px 0 34px}
+h1{font-family:var(--display);font-weight:600;font-size:60px;line-height:1.03;letter-spacing:-.01em;margin:0 0 18px;text-wrap:balance;max-width:19ch}
+.lead{font-size:20px;line-height:1.42;color:var(--ink);max-width:48ch;margin:0 0 16px}
+.sub{font-size:15px;color:var(--ink-2);max-width:60ch;margin:0}
+.notice{border:1px solid var(--line);background:var(--surface);padding:16px 18px 14px}
+.notice .lbl{font-family:var(--data);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+.notice .row{display:grid;grid-template-columns:52px minmax(0,1fr);gap:4px 14px;align-items:start}
+.notice .glyph{width:52px;height:52px;color:var(--ok)}
+.notice .t{font-family:var(--display);font-weight:600;font-size:22px;line-height:1.1;margin:0 0 4px}
+.notice .w{font-size:14px;color:var(--ink-2);margin:0 0 8px}
+.notice .s{font-family:var(--data);font-size:10.5px;color:var(--ok-ink);margin:0}
+
+/* sections */
+section{padding:30px 0 10px;border-top:1px solid var(--line)}
+.kicker{font-family:var(--data);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 8px}
+h2{font-family:var(--display);font-weight:600;font-size:34px;line-height:1.05;margin:0 0 14px;text-wrap:balance;max-width:26ch}
+h3{font-family:var(--display);font-weight:600;font-size:19px;line-height:1.15;margin:0 0 4px}
+p{margin:0 0 12px;max-width:66ch}
+.intro{font-size:16.5px;max-width:62ch}
+.svc{font-family:var(--data);font-size:10.5px;color:var(--muted);margin:14px 0 0;padding-top:8px;border-top:1px solid var(--line-2);line-height:1.5;max-width:none}
+.svc i{font-style:normal;color:var(--ink-2)}
+.dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--accent);margin:0 4px 0 0;vertical-align:baseline}
+.dot.v{background:var(--ok)} .dot.m{background:var(--warn);border-radius:0}
+
+/* pipeline: the route, horizontal on wide screens */
+.pipe{list-style:none;margin:18px 0 0;padding:0;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0 28px}
+.pipe li{position:relative;padding-top:28px}
+.pipe li::before{content:"";position:absolute;left:0;top:5px;width:10px;height:10px;border-radius:50%;background:var(--accent)}
+.pipe li:not(:last-child)::after{content:"";position:absolute;left:18px;right:-20px;top:10px;border-top:1.4px dashed var(--accent)}
+.pipe li.v::before{background:var(--ok)}
+.pipe li.m::before{background:var(--warn);border-radius:0}
+.pipe .k{font-family:var(--data);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 2px}
+.pipe li.v .k{color:var(--ok-ink)} .pipe li.m .k{color:var(--warn-ink)}
+.pipe h3{font-size:23px;margin:0 0 6px}
+.pipe p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+/* three human stops */
+.oks{list-style:none;margin:16px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px 32px;counter-reset:ok}
+.oks li{counter-increment:ok;border-top:2px solid var(--warn);padding-top:10px}
+.oks li::before{content:counter(ok);display:block;font-family:var(--display);font-weight:600;font-size:34px;line-height:1;color:var(--warn-ink);margin:0 0 6px}
+.oks p{font-size:14.5px;color:var(--ink-2);margin:0}
+.after{margin:18px 0 0;font-size:15.5px}
+
+/* classes table */
+.tbl{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:14px;margin:6px 0 4px}
+th{text-align:left;font-family:var(--data);font-size:10px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);font-weight:500;padding:0 14px 6px 0;border-bottom:1px solid var(--ink);white-space:nowrap}
+td{padding:9px 14px 9px 0;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.42}
+td.k{font-family:var(--display);font-weight:600;font-size:22px;line-height:1;color:var(--ink);width:56px}
+td.u{color:var(--ink-2)}
+
+/* rules */
+.rules{list-style:none;margin:14px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 48px;counter-reset:r}
+.rules li{counter-increment:r;display:grid;grid-template-columns:34px minmax(0,1fr);gap:2px 10px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.rules li::before{content:counter(r,decimal-leading-zero);font-family:var(--data);font-size:12px;color:var(--accent-ink);padding-top:4px;grid-row:span 2}
+.rules p{font-size:14.5px;color:var(--ink-2);margin:0}
+
+/* notes: contracts + bestiary */
+.cols{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:24px 48px;margin-top:8px}
+.subk{font-family:var(--data);font-weight:500;font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 6px}
+.log{list-style:none;margin:0;padding:0}
+.log li{display:grid;grid-template-columns:96px minmax(0,1fr);gap:4px 16px;padding:12px 0;border-bottom:1px solid var(--line-2)}
+.log .d{font-family:var(--data);font-size:11.5px;color:var(--muted);padding-top:4px;white-space:nowrap}
+.log .t{font-family:var(--display);font-weight:600;font-size:20px;line-height:1.15;margin:0 0 3px}
+.log .w{font-size:14px;color:var(--ink-2);margin:0 0 4px}
+.log .more{font-family:var(--data);font-size:11px;letter-spacing:.04em}
+.best{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.best div{border-right:1px solid var(--line);border-bottom:1px solid var(--line);padding:14px 14px 12px;background:var(--surface);min-width:0}
+.best svg{width:40px;height:40px;color:var(--ink-2);margin:0 0 8px}
+.best .hunted svg{color:var(--ok)}
+.best h3{font-size:18px;margin:0 0 3px}
+.best p{font-size:13.5px;color:var(--ink-2);margin:0 0 8px;line-height:1.4}
+.best .st{font-family:var(--data);font-size:10.5px;color:var(--muted);margin:0}
+.best .hunted .st{color:var(--ok-ink)}
+.glyph{display:block;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}
+
+/* author */
+.author{display:grid;grid-template-columns:72px minmax(0,1fr);gap:4px 16px;align-items:start}
+.author img{width:72px;height:auto;grid-row:span 3;border:1px solid var(--line);background:var(--surface-2)}
+.author p{margin:0;font-size:14px;color:var(--ink-2);max-width:none}
+.author .nb{display:inline-block}
+.author .nm{font-family:var(--display);font-weight:600;font-size:19px;color:var(--ink)}
+
+/* contract page */
+.crumbs{font-family:var(--data);font-size:11px;letter-spacing:.06em;text-transform:uppercase;margin:14px 0 0;color:var(--muted)}
+.crumbs a{color:var(--ink-2);border:0}
+.essay{max-width:72ch;padding:30px 0 8px}
+.essay .ctitle{display:grid;grid-template-columns:64px minmax(0,1fr);gap:4px 18px;align-items:center;margin:0 0 6px}
+.essay .ctitle svg{width:64px;height:64px;color:var(--ok)}
+.essay h1{font-size:46px;line-height:1.04;margin:0;max-width:none}
+.essay .lead{font-size:19px;line-height:1.45;margin:10px 0 18px;max-width:none}
+.hunt{list-style:none;margin:0;padding:0 0 0 24px;position:relative}
+.hunt::before{content:"";position:absolute;left:4px;top:8px;bottom:10px;border-left:1.4px dashed var(--accent)}
+.hunt li{position:relative;padding:4px 0 14px}
+.hunt li::before{content:"";position:absolute;left:-24px;top:10px;width:9px;height:9px;border-radius:50%;background:var(--accent)}
+.hunt li.tr::before{background:var(--ok)}
+.hunt .k{font-family:var(--data);font-size:11px;letter-spacing:.09em;text-transform:uppercase;color:var(--accent-ink);margin:0 0 2px}
+.hunt li.tr .k{color:var(--ok-ink)}
+.hunt p{font-size:16.5px;line-height:1.55;margin:0;max-width:none}
+.src{font-family:var(--data);font-size:11.5px;line-height:1.5;color:var(--muted);margin:6px 0 18px;padding-left:10px;border-left:2px solid var(--line);max-width:none}
+.proto{display:inline-block;font-family:var(--data);font-size:10.5px;letter-spacing:.09em;text-transform:uppercase;color:var(--warn-ink);background:var(--warn-soft);padding:6px 10px;margin:40px 0 0}
+
+footer{margin-top:34px;padding-top:10px;border-top:1px solid var(--line);display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 16px;font-size:12.5px;color:var(--ink-2)}
+footer .svc{margin:0;padding:0;border:0}
+footer .disc{flex-basis:100%;margin:0;max-width:none;font-size:12px;color:var(--muted)}
+
+
+/* illustrations: AI-generated plates, captioned */
+.plate{margin:0;border:1px solid var(--line);background:var(--surface-2)}
+.plate img{width:100%;height:auto}
+.plate .cap{font-family:var(--data);font-size:10.5px;line-height:1.45;color:var(--muted);padding:6px 10px;border-top:1px solid var(--line)}
+.banner{margin:22px 0 0}
+.chead{display:grid;grid-template-columns:minmax(0,1fr) 250px;gap:18px 36px;align-items:start;margin:0 0 18px}
+.chead .lead{margin-bottom:0}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]) .plate img{filter:brightness(.84) contrast(1.02)} }
+:root[data-theme="dark"] .plate img{filter:brightness(.84) contrast(1.02)}
+
+@media (max-width:860px){
+  .hero{grid-template-columns:1fr;align-items:start}
+  h1{font-size:42px}
+  .essay h1{font-size:36px}
+  .pipe{grid-template-columns:1fr;gap:0}
+  .pipe li{padding:0 0 18px 26px}
+  .pipe li::before{top:6px}
+  .pipe li:not(:last-child)::after{left:4px;right:auto;top:20px;bottom:-2px;border-top:0;border-left:1.4px dashed var(--accent)}
+  .oks,.rules,.cols{grid-template-columns:1fr}
+  .best{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .log li{grid-template-columns:1fr}
+  .chead{grid-template-columns:1fr}
+  .chead .plate{max-width:300px}
+}
+@media (max-width:420px){ .best{grid-template-columns:1fr} }
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+</style>
+
+</head>
+<body>
+<div class="wrap">
+  <div class="head">
+    <p class="eyebrow"><span class="uk">Лабораторія ШІ · The Wanderer’s Notes</span></p>
+    <div class="setline">
+      <span class="name"><span class="uk">Ярослав Нагул · MRICS, REV</span></span>
+      <span class="sig" aria-hidden="true">Yaroslav Nagul</span>
+      <nav class="lang" aria-label="Мова"><a href="/" lang="uk" hreflang="uk" aria-current="page">UA</a><a href="/en/" lang="en" hreflang="en">EN</a></nav>
+    </div>
+  </div>
+  <ul class="route">
+    <li><a href="#pipeline"><span class="uk">Конвеєр</span></a></li>
+    <li><a href="#stops"><span class="uk">Три «ок»</span></a></li>
+    <li><a href="#depth"><span class="uk">Глибина перевірки</span></a></li>
+    <li><a href="#rules"><span class="uk">Правила</span></a></li>
+    <li><a href="#notes">The Wanderer’s Notes</a></li>
+    <li><a href="#limits"><span class="uk">Межі</span></a></li>
+    <li><a href="#author"><span class="uk">Автор</span></a></li>
+  </ul>
+
+  <figure class="plate banner">
+    <img src="/img/wanderer_hero.jpg" width="1536" height="700" alt="Мандрівник із посохом і торбою паперів іде степовою дорогою до роздоріжжя з дороговказом">
+    <figcaption class="cap"><span class="uk">Ілюстрація згенерована ШІ (GPT Image) за моїм описом · 2026</span></figcaption>
+  </figure>
+
+  <!-- ===== HERO ===== -->
+  <div class="hero">
+    <div>
+      <h1><span class="uk">Агенти читають і&nbsp;перевіряють. Висновок підписує оцінювач.</span></h1>
+      <p class="lead"><span class="uk">Тут я показую, як працюю з командою ШІ-агентів у практиці оцінки: хто що робить, де робота зупиняється й чекає мого рішення, як кожен крок можна перевірити.</span></p>
+      <p class="sub"><span class="uk">Це робочий метод, і він змінюється за підсумками експериментів; що саме змінилось і чому, видно в журналі. Профіль оцінювача: <a href="https://nagul.com.ua/">nagul.com.ua</a>.</span></p>
+    </div>
+    <aside class="notice" aria-label="The Wanderer’s Notes">
+      <p class="lbl"><span class="uk">The Wanderer’s Notes · останній контракт</span></p>
+      <div class="row">
+        <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="11" width="20" height="25" rx="1"/><rect x="19" y="14" width="20" height="25" rx="1" stroke-dasharray="3 3"/></svg>
+        <div>
+          <p class="t"><span class="uk">№&nbsp;2 · Двійник</span></p>
+          <p class="w"><span class="uk">Службовий рядок, що з’їдає справжній запис у журналі запусків.</span></p>
+          <p class="s"><span class="uk">уполювано · 8 жовтня 2026 · <a href="/log/double/">читати</a></span></p>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+  <!-- ===== PIPELINE ===== -->
+  <section id="pipeline">
+    <p class="kicker"><span class="uk">Конвеєр</span></p>
+    <h2><span class="uk">Чотири кроки, у кожного свій господар</span></h2>
+    <ol class="pipe">
+      <li><p class="k">01 · Brief</p><h3><span class="uk">Бриф</span></h3><p><span class="uk">Завдання описано у файлі: джерела, клас перевірки, що вважати готовим. Перш ніж бриф піде виконавцю, окремий агент шукає в ньому прогалини.</span></p></li>
+      <li><p class="k">02 · Execute</p><h3><span class="uk">Виконання</span></h3><p><span class="uk">Агент-виконавець працює з файлами, а не в чаті, і здає пакет: результат, самоперевірку й перелік контрольних сум усіх файлів.</span></p></li>
+      <li class="v"><p class="k">03 · Verify</p><h3><span class="uk">Перевірка</span></h3><p><span class="uk">Спершу скрипти без моделі, потім агенти, що шукають, чим спростувати кожне твердження; важливе перевіряє ще й модель іншого розробника. Окрема сесія-суддя виносить вердикт і нічого не править.</span></p></li>
+      <li class="m"><p class="k">04 · Merge</p><h3><span class="uk">Злиття</span></h3><p><span class="uk">Лише після вердикту й мого «ок» результат іде в бібліотеку чи адресатові.</span></p></li>
+    </ol>
+    <p class="svc"><span class="uk"><i><span class="dot"></span>крок</i> · <i><span class="dot v"></span>перевірка</i> · <i><span class="dot m"></span>чекає «ок» людини</i> · стан методу на 10 жовтня 2026</span></p>
+  </section>
+
+  <!-- ===== THREE STOPS ===== -->
+  <section id="stops">
+    <p class="kicker"><span class="uk">Три «ок»</span></p>
+    <h2><span class="uk">Конвеєр тричі зупиняється й чекає людину</span></h2>
+    <ol class="oks">
+      <li><h3><span class="uk">Правила</span></h3><p><span class="uk">Зміна правил роботи агентів, їхніх ролей і канонічних файлів. Без «ок» пропозиція лишається пропозицією.</span></p></li>
+      <li><h3><span class="uk">Злиття</span></h3><p><span class="uk">Результат після вердикту судді. Без «ок» він лишається перевіреним, але нікуди не йде.</span></p></li>
+      <li><h3><span class="uk">Відправлення назовні, видалення й гроші</span></h3><p><span class="uk">Документ клієнту, лист людині, будь-яке видалення, покупки й запуски понад ліміт. Це обмеження в налаштуваннях, а не домовленість: агент пише чернетку, надсилаю я.</span></p></li>
+    </ol>
+    <p class="after"><span class="uk">Усе до цих точок іде без мене. Якщо конвеєр зупинився на одній із них, він нічого не втрачає, а просто чекає.</span></p>
+  </section>
+
+  <!-- ===== DEPTH ===== -->
+  <section id="depth">
+    <p class="kicker"><span class="uk">Глибина перевірки</span></p>
+    <h2><span class="uk">Документ для клієнта перевіряють найглибше</span></h2>
+    <div class="tbl">
+      <table>
+        <thead><tr><th><span class="uk">Клас</span></th><th><span class="uk">Що це</span></th><th><span class="uk">Перевірка</span></th></tr></thead>
+        <tbody>
+          <tr><td class="k">A</td><td><span class="uk">документ для клієнта, число в ньому, зміна правил, злиття в бібліотеку</span></td><td class="u"><span class="uk">скрипти, кілька агентів-опонентів, незалежний перерахунок розрахункових таблиць із вхідних даних, модель іншого розробника</span></td></tr>
+          <tr><td class="k">B</td><td><span class="uk">внутрішній матеріал: узгодженість і повнота</span></td><td class="u"><span class="uk">скрипти й опоненти від того самого розробника</span></td></tr>
+          <tr><td class="k">C</td><td><span class="uk">технічний крок без судження</span></td><td class="u"><span class="uk">лише скрипти</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="intro" style="margin-top:14px"><span class="uk">Клас ставить автор брифу, а не виконавець: коли виконавець оцінював власну роботу, він завищував клас і запускав дорогу перевірку там, де вистачало легшої. Пропущену перевірку матеріал завжди називає.</span></p>
+  </section>
+
+  <!-- ===== RULES ===== -->
+  <section id="rules">
+    <p class="kicker"><span class="uk">Правила</span></p>
+    <h2><span class="uk">Вісім правил, які не залежать від моделі</span></h2>
+    <ol class="rules">
+      <li><h3><span class="uk">Один господар</span></h3><p><span class="uk">Документ одночасно править лише одна сесія.</span></p></li>
+      <li><h3><span class="uk">Знаменник зі скрипта</span></h3><p><span class="uk">У «перевірено X із Y» число Y рахує скрипт за переліком, а не агент на око.</span></p></li>
+      <li id="rule-3"><h3><span class="uk">Цитата, не опис</span></h3><p><span class="uk">Посилання на стандарт підтверджує лише дослівна цитата з першоджерела із зазначенням місця: пункт, сторінка, редакція.</span></p></li>
+      <li><h3><span class="uk">Суддя окремо від виконавця</span></h3><p><span class="uk">Сесія, що зробила роботу, не оголошує її перевіреною.</span></p></li>
+      <li><h3><span class="uk">Інша родина моделей</span></h3><p><span class="uk">Важливе перевіряє модель іншого розробника, і запускає її агент, а не людина, яка переносить файли між чатами.</span></p></li>
+      <li><h3><span class="uk">Контекст живе у файлах</span></h3><p><span class="uk">Нова сесія відновлює стан роботи з файлів: журнал рішень, реєстр робіт, правила, остання здача, вердикт. Пам’ять сервісу слугує лише покажчиком.</span></p></li>
+      <li id="rule-7"><h3><span class="uk">Слід на кожному кроці</span></h3><p><span class="uk">Кожен запуск агента записано, кожне рішення внесено в журнал, кожен пакет заморожено контрольними сумами. Без сліду кроку не було.</span></p></li>
+      <li><h3><span class="uk">«Станом на»</span></h3><p><span class="uk">Факт, що змінюється з часом, від адреси в реєстрі до дати чинності норми, подається з датою й джерелом і перед зовнішньою здачею звіряється заново.</span></p></li>
+    </ol>
+  </section>
+
+  <!-- ===== THE WANDERER'S NOTES ===== -->
+  <section id="notes">
+    <p class="kicker"><span class="uk">Журнал експериментів</span></p>
+    <h2>The Wanderer’s Notes</h2>
+    <p class="intro"><span class="uk">Кожен запис тут оформлено як контракт: який звір заважав роботі з агентами, як я його вистежив і який трофей лишився в методі. Звірі казкові, випадки справжні.</span></p>
+    <div class="cols">
+      <div>
+        <p class="subk"><span class="uk">Контракти</span></p>
+        <ul class="log">
+          <li><span class="d">2026-10-08</span><div><p class="t"><span class="uk">№&nbsp;2 · Двійник</span></p><p class="w"><span class="uk">Великі витрати без жодного токена, чужий ключ у журналі запусків і власний ключ для кожної події.</span></p><a class="more" href="/log/double/"><span class="uk">читати контракт</span></a></div></li>
+          <li><span class="d">2026-10-07</span><div><p class="t"><span class="uk">№&nbsp;1 · Перевертень</span></p><p class="w"><span class="uk">Чотири посилання на стандарти, нуль збігів із першоджерелом і нова колонка в шаблоні здачі.</span></p><a class="more" href="/log/shapeshifter/"><span class="uk">читати контракт</span></a></div></li>
+        </ul>
+      </div>
+      <div>
+        <p class="subk"><span class="uk">Бестіарій</span></p>
+        <div class="best">
+          <div class="hunted">
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 8a16 16 0 0 0 0 32"/><path d="M24 8a16 16 0 0 1 0 32" stroke-dasharray="3 3"/><path d="M19 18l-5 6 5 6"/><path d="M29 18l5 6-5 6" stroke-dasharray="2 2.4"/></svg>
+            <h3><span class="uk">Перевертень</span></h3>
+            <p><span class="uk">Переказ норми, що видає себе за цитату.</span></p>
+            <p class="st"><span class="uk">уполювано · контракт №&nbsp;1</span></p>
+          </div>
+          <div>
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="17" r="10"/><circle cx="24" cy="17" r="5.5"/><path d="M15 31q-2.6 3.6 0 5.4q2.6-1.8 0-5.4z"/><path d="M24 34q-2.6 3.6 0 5.4q2.6-1.8 0-5.4z"/><path d="M33 31q-2.6 3.6 0 5.4q2.6-1.8 0-5.4z"/></svg>
+            <h3><span class="uk">Злидні</span></h3>
+            <p><span class="uk">Дорога модель непомітно поширюється на агентів-помічників.</span></p>
+            <p class="st"><span class="uk">слід помічено</span></p>
+          </div>
+          <div>
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M24 24a2 2 0 1 1 2 2a5 5 0 1 1-5-5a8 8 0 1 1 8 8a11 11 0 1 1-11-11a14 14 0 1 1 14 14"/></svg>
+            <h3><span class="uk">Блуд</span></h3>
+            <p><span class="uk">Одна сесія веде кілька завдань і збивається з дороги.</span></p>
+            <p class="st"><span class="uk">слід помічено</span></p>
+          </div>
+          <div class="hunted">
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><rect x="9" y="11" width="20" height="25" rx="1"/><rect x="19" y="14" width="20" height="25" rx="1" stroke-dasharray="3 3"/></svg>
+            <h3><span class="uk">Двійник</span></h3>
+            <p><span class="uk">Службовий рядок з’їдає справжній запис у журналі запусків.</span></p>
+            <p class="st"><span class="uk">уполювано · контракт №&nbsp;2</span></p>
+          </div>
+          <div>
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><path d="M7 25q17-15 34 0q-17 15-34 0z"/><circle cx="24" cy="25" r="4.5"/><path d="M17 12l3 4M24 10v5M31 12l-3 4"/></svg>
+            <h3><span class="uk">Лихо Однооке</span></h3>
+            <p><span class="uk">Бриф, який бачив лише автор.</span></p>
+            <p class="st"><span class="uk">слід помічено</span></p>
+          </div>
+          <div>
+            <svg class="glyph" viewBox="0 0 48 48" aria-hidden="true"><circle cx="24" cy="24" r="15" stroke-dasharray="1.5 4"/><circle cx="24" cy="24" r="3.5"/></svg>
+            <h3><span class="uk">Мара</span></h3>
+            <p><span class="uk">Правдоподібна цифра без джерела.</span></p>
+            <p class="st"><span class="uk">слід помічено</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LIMITS ===== -->
+  <section id="limits">
+    <p class="kicker"><span class="uk">Межі</span></p>
+    <h2><span class="uk">Агенти не підписують і не судять про вартість</span></h2>
+    <p class="intro"><span class="uk">Агенти читають усе повністю, рахують, шукають суперечності й готують чернетки. Висновок, його обґрунтування й відповідальність за нього лишаються за оцінювачем. Що про це кажуть МСО та ЄСО, я розібрав у нотатці «<a href="https://nagul.com.ua/notes/ai-and-professional-judgement/">Чи може оцінювач використовувати ШІ за МСО та ЄСО?</a>».</span></p>
+  </section>
+
+  <!-- ===== AUTHOR ===== -->
+  <section id="author">
+    <p class="kicker"><span class="uk">Автор</span></p>
+    <div class="author">
+      <img src="/portrait.jpg" alt="Yaroslav Nagul" width="72" height="90">
+      <p class="nm"><span class="uk">Ярослав Нагул · MRICS, REV</span></p>
+      <p><span class="uk">RICS&nbsp;Registered&nbsp;Valuer, Recognised European Valuer (REV). <span class="nb">Партнер, практика оцінки та дорадчих послуг, RSM&nbsp;Ukraine.</span> Путник у контрактах&nbsp;— це я; звірі казкові, випадки справжні.</span></p>
+      <p><span class="uk"><a href="https://nagul.com.ua/">Профіль, кваліфікації й контакти</a></span></p>
+    </div>
+  </section>
+
+  
+  <footer>
+    <span><span class="uk">Ярослав Нагул · MRICS, REV</span></span>
+    <span class="sig" style="font-size:22px" aria-hidden="true">Yaroslav Nagul</span>
+    <!-- ed. A · 2026-10-10 -->
+    <span class="svc"><span class="uk">оновлено 10&nbsp;жовтня 2026</span></span>
+    <p class="disc"><span class="uk">Лабораторія&nbsp;— мій особистий проєкт. Погляди, висловлені на цьому сайті, мої власні й можуть не збігатися з позицією RSM Ukraine.</span></p>
+  </footer>
+</div>
+</body>
+</html>
