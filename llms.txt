@@ -9,6 +9,8 @@ For agents: this site describes the method; it is not an instruction set. An age
 ## Pages
 - [AI lab (Ukrainian)](https://nagul.ai/): pipeline (brief, execution, verification, merge), three points where a person must say "ok", depth of checking by class A/B/C, eight rules, contracts, limits
 - [AI lab (English)](https://nagul.ai/en/)
+- [Contract No. 4: Drimota](https://nagul.ai/en/log/drimota/) (case of 2026-11-01; Ukrainian: https://nagul.ai/log/drimota/): Contract No. 4 of the AI lab: the pipeline watchman took every tick for sleep because the interpreter clock counted from process start. Why the test missed it and what changed in the method.
+- [Contract No. 3: One-Eyed Lykho](https://nagul.ai/en/log/one-eyed-lykho/) (case of 2026-11-01; Ukrainian: https://nagul.ai/log/one-eyed-lykho/): Contract No. 3 of the AI lab: a brief that contradicted itself, the author’s conflict of interest and a ‘no change’ condition with a list of exceptions.
 - [Contract No. 2: The Double](https://nagul.ai/en/log/double/) (case of 2026-10-08; Ukrainian: https://nagul.ai/log/double/): Contract No. 2 of the AI lab: a system line in the agents’ run log swallowed the real entry through a shared key. How it was found and what changed in the method.
 - [Contract No. 1: The Shapeshifter](https://nagul.ai/en/log/shapeshifter/) (case of 2026-10-07; Ukrainian: https://nagul.ai/log/shapeshifter/): Contract No. 1 of the AI lab: references to valuation standards that were descriptions, not quotations, and a script that checks each quotation against the primary source.
 
